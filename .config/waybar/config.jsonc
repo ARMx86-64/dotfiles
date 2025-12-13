@@ -1,0 +1,85 @@
+
+//--- GENERAL BAR CONFIG ---
+{
+    "layer": "top",
+    "position": "top",
+    "mode": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "margins": 0,
+
+//--- MODULE POSITIONS ---
+
+    "modules-left": ["tray"],
+    "modules-center": ["custom/l_end", "hyprland/workspaces", "custom/r_end"],
+    "modules-right": ["network", "battery", "clock"],
+
+//--- MODULES
+
+    "tray": {
+        "icon-size": 15,
+        "spacing": 4,
+        "rotate": 0
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "default": "",
+            "active": "",
+            "empty": "",
+            "persistent": ""
+        },
+        "all-outputs": true,
+        "active-only": false,
+        "persistent-workspaces": {
+            "*": 6
+        },
+        "rotate": 0
+    },
+
+    "network": {
+        "tooltip": true,
+        "format-wifi": "󰖩",
+        "format-ethernet": "󰈀",
+        "format-linked": "󱚵 {ifname} (no IP)",
+        "tooltip-format": "",
+        "format-disconnected": "󰤫",
+        "tooltop-format-disconnected": "",
+        "interval": 5,
+        "rotate": 0
+    },
+
+    "battery": {
+        "bat": "BAT1",
+        "states": {
+            "good": 90,
+            "warning": 50,
+            "critical": 10
+        },
+        "format": "{icon} {capacity}%",
+        "format-icons": ["󱊡", "󱊡", "󱊡", "󱊡", "󱊢", "󱊢", "󱊢", "󱊣", "󱊣", "󱊣"],
+        "rotate": 0,
+        "interval": 30
+    },
+
+    "clock": {
+        "format": " {:%R   %d.%m.%y}",
+        "rotate": 0
+    },
+
+    "custom/l_end": {
+        "format": " ",
+        "interval": "once",
+        "tooltip": false
+    },
+
+    "custom/r_end": {
+        "format": " ",
+        "interval": "once",
+        "tooltip": false
+    }
+
+}
+
