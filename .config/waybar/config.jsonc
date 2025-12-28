@@ -11,11 +11,21 @@
 
 //--- MODULE POSITIONS ---
 
-    "modules-left": ["tray"],
+    "modules-left": ["custom/updates", "tray"],
     "modules-center": ["custom/l_end", "hyprland/workspaces", "custom/r_end"],
     "modules-right": ["network", "battery", "clock"],
 
 //--- MODULES
+
+    "custom/updates": {
+        "exec": "/home/armx/config_repositories/dotfiles/scripts/systemupdate.sh",
+        "return-type": "json",
+        "format": " 󰇚 {}",
+        "rotate": 0,
+        "on-click": "/home/armx/config_repositories/dotfiles/scripts/systemupdate.sh up",
+        "interval": 86400,
+        "tooltip": true
+    },
 
     "tray": {
         "icon-size": 15,
