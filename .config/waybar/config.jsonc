@@ -18,13 +18,14 @@
 //--- MODULES
 
     "custom/updates": {
-        "exec": "/home/armx/config_repositories/dotfiles/scripts/systemupdate.sh",
+        "exec": "/home/armx/config_repositories/dotfiles/scripts/checkupdates.sh",
         "return-type": "json",
         "format": " 󰇚 {}",
         "rotate": 0,
-        "on-click": "/home/armx/config_repositories/dotfiles/scripts/systemupdate.sh up",
+        "on-click": "/home/armx/config_repositories/dotfiles/scripts/systemupdate.sh",
         "interval": 86400,
-        "tooltip": true
+        "tooltip": true,
+        "signal": 8
     },
 
     "tray": {
